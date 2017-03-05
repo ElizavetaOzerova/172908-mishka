@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML Academy: Мишка - Вязание на заказ</title>
+</head>
+
+<body>
+    <header class="page-header">
+        <a class="page-header__logo" href="index.html"><img src="http://placehold.it/86x35" alt="MISHKA" width="86" height="35"></a>
+
+        <nav class="main-nav main-nav--closed">
+            <button class="main-nav__toggler" type="button">Открыть меню</button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item main-nav__item--active"><a href="catalog.html">Каталог товаров</a></li>
+                    <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+                </ul>
+
+                <ul class="main-nav__user-list">
+                    <li class="main-nav__user-item"><a href="#">Поиск по сайту</a></li>
+                    <li class="main-nav__user-item"><a href="#">Корзина: пока пуста</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="knitting-order">
+        <h1 class="knitting-order__title">Каталог товаров</h1>
+
+        <div class="knitting-order__wrapper">
+            <p class="knitting-order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
+
+            <form class="knitting-order__form" action="https://echo.htmlacademy.ru/" method="post">
+                <fieldset class="knitting-order__fieldset">
+                    <legend>Тип</legend>
+                    <ul class="knitting-order__fieldset-list">
+                        <li class="knitting-order__type-item">
+                            <input class="knitting-order__type-input" type="radio" id="type-one" name="type-item" value="type-one" checked>
+                            <label class="knitting-order__type-label" for="type-one"> Аксессуар для интерьера</label>
+                        </li>
+                        <li class="knitting-order__type-item">
+                            <input class="knitting-order__type-input" type="radio" id="type-two" name="type-item" value="type-two">
+                            <label class="knitting-order__type-label" for="type-two"> Детская игрушка</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="knitting-order__fieldset">
+                    <legend>Цвет</legend>
+                    <ul class="knitting-order__fieldset-list">
+                        <li class="knitting-order__color-item">
+                            <label class="knitting-order__color-label">
+                  <input class="knitting-order__color-input" type="checkbox" name="color-one" checked>
+                  <span class="knitting-order__color-check"></span>
+                  Белый
+                </label>
+                        </li>
+                        <li class="knitting-order__color-item">
+                            <label class="knitting-order__color-label">
+                  <input class="knitting-order__color-input" type="checkbox" name="color-two" checked>
+                  <span class="knitting-order__color-check"></span>
+                  Серый
+                </label>
+                        </li>
+                        <li class="knitting-order__color-item">
+                            <label class="knitting-order__color-label">
+                  <input class="knitting-order__color-input" type="checkbox" name="color-three">
+                  <span class="knitting-order__color-check"></span>
+                  "Тиффани"
+                </label>
+                        </li>
+                        <li class="knitting-order__color-item">
+                            <label class="knitting-order__color-label">
+                  <input class="knitting-order__color-input" type="checkbox" name="color-four">
+                  <span class="knitting-order__color-check"></span>
+                  Черный
+                </label>
+                        </li>
+                        <li class="knitting-order__color-item">
+                            <label class="knitting-order__color-label">
+                  <input class="knitting-order__color-input" type="checkbox" name="color-five">
+                  <span class="knitting-order__color-check"></span>
+                  Розовый
+                </label>
+                        </li>
+                        <li class="knitting-order__color-item">
+                            <label class="knitting-order__color-label">
+                  <input class="knitting-order__color-input" type="checkbox" name="color-six">
+                  <span class="knitting-order__color-check"></span>
+                  Оранжевый
+                </label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="knitting-order__fieldset">
+                    <legend>ФИО</legend>
+                    <label class="knitting-order__client-label" for="client-name">Имя:</label>
+                    <input class="knitting-order__client-input" type="text" id="client-name" name="client-name" pattern="^[A-Za-zА-Яа-яЁё\s]+$" placeholder="Введите ваше имя*">
+
+                    <label class="knitting-order__client-label" for="client-surname">Фамилия:</label>
+                    <input class="knitting-order__client-input" type="text" id="client-surname" name="client-surname" pattern="^[A-Za-zА-Яа-яЁё\s]+$" placeholder="Укажите фамилию*">
+
+                    <label class="knitting-order__client-label" for="client-patronymic">Отчество:</label>
+                    <input class="knitting-order__client-input" type="text" id="client-patronymic" name="client-patronymic" pattern="^[A-Za-zА-Яа-яЁё\s]+$" placeholder="Отчество, если желаете">
+                </fieldset>
+
+                <fieldset class="knitting-order__fieldset">
+                    <legend>Тел</legend>
+                    <input class="knitting-order__client-input knitting-order__client-input--phone" type="tel" id="client-phone" name="client-phone" placeholder="+7 ХХХ ХХ ХХ*">
+                </fieldset>
+
+                <fieldset class="knitting-order__fieldset">
+                    <legend>E-mail</legend>
+                    <input class="knitting-order__client-input knitting-order__client-input--email" type="email" id="client-email" name="client-name" placeholder="Ваш Email*">
+                </fieldset>
+
+                <fieldset class="knitting-order__fieldset">
+                    <legend>Доп</legend>
+                    <textarea class="knitting-order__suggestions-textarea" rows="10" cols="40" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </fieldset>
+
+                <p class="knitting-order__remark">*Поля обязательны для заполнения</p>
+                <input class="knitting-order__submit btn" type="submit" value="Отправить заказ">
+
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="page-footer">
+        <div class="page-footer__wrapper">
+            <div class="page-footer__social">
+                <ul class="social-link">
+                    <li class="social-link--insta"><a href="https://www.instagram.com/htmlacademy/" title="Мы в Instagram">Мы в Instagram</a></li>
+                    <li class="social-link--fb"><a href="https://www.facebook.com/htmlacademy" title="Мы в Facebook">Мы в Facebook</a></li>
+                    <li class="social-link--tw"><a href="https://twitter.com/htmlacademy_ru" title="Мы в Twitter">Мы в Twitter</a></li>
+                </ul>
+            </div>
+
+            <p class="page-footer__copyright">
+                <a class="page-footer__copyright-link" href="https://htmlacademy.ru/">
+            Разработано
+            <img src="http://placehold.it/27x34" alt="HTML Academy icon" title="HTML Academy">
+          </a>
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
