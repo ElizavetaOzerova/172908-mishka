@@ -1,0 +1,51 @@
+.page-footer {
+  background-color: @light-gray;
+
+  &__wrapper {
+    width: @wrapper-width;
+    .center-block();
+    text-align: center;
+  }
+
+  &__social-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid @border-gray;
+  }
+
+  &__social-link {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    vertical-align: top;
+    font-size: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--insta {
+      background-image: url(../img/icon-insta.svg);
+    }
+
+    &--fb {
+      background-image: url(../img/icon-fb.svg);
+    }
+
+    &--tw {
+      background-image: url(../img/icon-twitter.svg);
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &__copyright {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &__copyright-link {
+    .bold-text(19px, 18px);
+  }
+}

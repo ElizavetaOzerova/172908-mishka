@@ -1,0 +1,28 @@
+.main-page-btn {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 25px 30px;
+  text-align: left;
+  border: none;
+  outline: none;
+  .bold-text(19px, 24px);
+  color: @white;
+  background-color: @blue;
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  transition: all 0.2s;
+
+  &--interior {
+    background-image: url(../img/icon-interior.svg);
+  }
+
+  &--toy {
+    background-color: darken(desaturate(spin(#63d1bb, 2.6422), 6.8572), 5.2941);
+    background-image: url(../img/icon-toy.svg);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+}

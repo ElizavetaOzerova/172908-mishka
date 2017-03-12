@@ -1,0 +1,47 @@
+.contacts__wrapper {
+  margin-left: 32px;
+  margin-right: 32px;
+  margin-bottom: 20px;
+}
+
+.contacts__title {
+  margin-bottom: 25px;
+  .bold-text(18px, 30px);
+}
+
+.contacts__table {
+  border-collapse: collapse;
+}
+
+.contacts__item {
+  color: @dark-gray;
+
+  & td {
+    vertical-align: top;
+    padding-bottom: 20px;
+    .regular-text(15px, 30px);
+
+    &:first-child {
+      min-width: 70px;
+    }
+  }
+}
+
+.contacts__email {
+  color: @dark-gray;
+  border-bottom: 1px solid #62d1ba;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.contacts__btn {
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+}
