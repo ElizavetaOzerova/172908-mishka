@@ -1,23 +1,29 @@
 .reviews__wrapper {
-  width: @wrapper-width;
-  .center-block();
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .reviews__title {
-  .bold-text(25px, 30px);
+  font-size: 25px;
+  line-height: 30px;
 }
 
 .reviews__text {
-  .regular-text();
+  font-size: 15px;
+  line-height: 30px;
 }
 
 .reviews__author-name {
-  .bold-text(18px, 24px);
+  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: bold;
   font-style: normal;
 }
 
 .reviews__author-email {
-  .regular-text(17px, 30px);
+  font-size: 17px;
+  line-height: 30px;
   font-style: normal;
 }
 
@@ -27,7 +33,7 @@
   font-size: 0;
   border: 1px solid @border-gray;
   background-color: @white;
-  background-image: url(../img/icon-left-arrow.svg);
+  background-image: url("../img/icon-left-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -38,7 +44,7 @@
   font-size: 0;
   border: 1px solid @border-gray;
   background-color: @white;
-  background-image: url(../img/icon-right-arrow.svg);
+  background-image: url("../img/icon-right-arrow.svg");
   background-repeat: no-repeat;
   background-position: center;
 }

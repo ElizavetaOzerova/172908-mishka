@@ -6,7 +6,10 @@
 
 .contacts__title {
   margin-bottom: 25px;
-  .bold-text(18px, 30px);
+  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
 }
 
 .contacts__table {
@@ -19,7 +22,8 @@
   & td {
     vertical-align: top;
     padding-bottom: 20px;
-    .regular-text(15px, 30px);
+    font-size: 15px;
+    line-height: 30px;
 
     &:first-child {
       min-width: 70px;
@@ -29,10 +33,10 @@
 
 .contacts__email {
   color: @dark-gray;
-  border-bottom: 1px solid #62d1ba;
+  border-bottom: 1px solid darken(saturate(spin(@blue, -0.4324), 0.2244), 0.1961);
 
   &:hover {
-    color: #46c1ae;
+    color: darken(desaturate(spin(@blue, 2.7317), 4.6579), 8.8235);
   }
 
   &:active {

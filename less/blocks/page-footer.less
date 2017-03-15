@@ -2,8 +2,8 @@
   background-color: @light-gray;
 
   &__wrapper {
-    width: @wrapper-width;
-    .center-block();
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
   }
 
@@ -24,15 +24,15 @@
     background-position: center;
 
     &--insta {
-      background-image: url(../img/icon-insta.svg);
+      background-image: url("../img/icon-insta.svg");
     }
 
     &--fb {
-      background-image: url(../img/icon-fb.svg);
+      background-image: url("../img/icon-fb.svg");
     }
 
     &--tw {
-      background-image: url(../img/icon-twitter.svg);
+      background-image: url("../img/icon-twitter.svg");
     }
 
     &:active {
@@ -46,6 +46,9 @@
   }
 
   &__copyright-link {
-    .bold-text(19px, 18px);
+    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+    font-size: 19px;
+    line-height: 18px;
+    font-weight: bold;
   }
 }

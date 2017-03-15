@@ -2,16 +2,20 @@
   background-color: @white;
 
   &__wrapper {
-    width: @wrapper-width;
-    .center-block();
+    margin-right: auto;
+    margin-left: auto;
   }
 
   &__title {
     margin-bottom: 25px;
-    .bold-text(25px, 30px);
+    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: bold;
 
     & span {
-      .regular-text(17px, 20px);
+      font-size: 17px;
+      line-height: 20px;
       text-transform: uppercase;
       color: @blue;
     }
@@ -20,7 +24,8 @@
   &__description {
     margin-top: 0;
     margin-bottom: 20px;
-    .regular-text(15px, 24px);
+    font-size: 15px;
+    line-height: 24px;
   }
 
   &__feature-table {
@@ -29,21 +34,26 @@
   }
 
   &__feature-item {
-    .regular-text(15px, 20px);
+    font-size: 15px;
+    line-height: 20px;
 
     & td {
       padding-top: 8px;
       padding-bottom: 8px;
       padding-right: 30px;
-      border-bottom: 1px solid #ececec;
+      border-bottom: 1px solid @border-gray;
     }
   }
 
   &__price {
     margin-top: 15px;
     margin-bottom: 25px;
-    .bold-text();
-    .center-block();
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: bold;
     text-align: center;
     color: @dark-gray;
   }
