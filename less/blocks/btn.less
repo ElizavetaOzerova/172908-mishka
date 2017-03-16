@@ -1,0 +1,32 @@
+.btn {
+  box-sizing: border-box;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 0;
+  margin-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: @dark-gray;
+  background-color: @white;
+  border: 2px solid @dark-gray;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    color: @white;
+    background-color: @dark-gray;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: @dark-gray;
+  }
+}

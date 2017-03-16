@@ -1,0 +1,37 @@
+.modal {
+  display: none;
+  z-index: 20;
+  padding: 30px;
+  text-align: center;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 30px;
+  color: @black;
+  background-color: @white;
+  outline: 1px solid @modal-gray;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.75);
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  &__btn {
+    box-sizing: border-box;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    padding: 16px 75px;
+    border: none;
+    color: @white;
+    background-color: @blue;
+  }
+
+  &--show {
+    display: block;
+  }
+}
