@@ -1,21 +1,51 @@
 .about-company {
   background-color: @white;
+}
 
-  &__wrapper {
-    margin-right: auto;
-    margin-left: auto;
+.about-company__wrapper {
+  .container();
+}
+
+.about-company__title {
+  margin-bottom: 20px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 25px;
+}
+
+.about-company__advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.about-company__advantages-column-1 {
+  margin-right: 80px;
+}
+
+.about-company__advantages-item {
+  box-sizing: border-box;
+  width: 260px;
+  min-height: 130px;
+  position: relative;
+  padding-top: 60px;
+
+  &::before {
+    position: absolute;
+    top: 10px;
+    content: url("../img/icon-feature-5.svg"); // пока нет спрайта, одна иконка для всех
+    width: 50px;
+    height: 50px;
   }
+}
 
-  &__title {
-    margin-bottom: 20px;
-    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
-    font-size: 25px;
-    line-height: 30px;
-  }
+.about-company__advantages-item b {
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+}
 
-  &__advantages-item b {
-    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 20px;
+@media @desktop-width {
+  .about-company__wrapper {
+    box-sizing: border-box;
+    padding-left: 175px;
   }
 }

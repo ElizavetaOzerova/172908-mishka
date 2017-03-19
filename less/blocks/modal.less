@@ -1,37 +1,94 @@
 .modal {
   display: none;
+  position: fixed;
+  top: 120px;
   z-index: 20;
-  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 30px 30px 45px 30px;
   text-align: center;
-  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
-  font-size: 15px;
-  line-height: 30px;
   color: @black;
   background-color: @white;
   outline: 1px solid @modal-gray;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.75);
-
-  &__title {
-    margin-top: 0;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
-    font-size: 25px;
-    line-height: 30px;
-  }
-
-  &__btn {
-    box-sizing: border-box;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 15px;
-    padding: 16px 75px;
-    border: none;
-    color: @white;
-    background-color: @blue;
-  }
+  box-shadow: 0 5px 15px 0 fade(@dark-gray; 75%);
 
   &--show {
     display: block;
+  }
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 25px;
+}
+
+.modal__text {
+  margin-bottom: 25px;
+}
+
+.modal__size-list {
+  margin-bottom: 30px;
+}
+
+.modal__size-list-item {
+  display: inline-block;
+  margin-right: 3px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.modal__input {
+  display: none;
+}
+
+.modal__size-list-item label {
+  box-sizing: border-box;
+  display: block;
+  width: 80px;
+  height: 50px;
+  line-height: 50px;
+  border: 2px solid @border-gray;
+  cursor: pointer;
+
+  &:hover {
+    border: 2px solid @modal-gray;
+  }
+}
+
+.modal__input:checked + label {
+  border: 2px solid @blue;
+}
+
+.modal__btn {
+  box-sizing: border-box;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding: 16px 75px;
+  border: none;
+  color: @white;
+  background-color: @blue;
+}
+
+@media @tablet-width {
+  .modal {
+    width: 565px;
+    left: 50%;
+    margin-left: -282px;
+    padding: 50px 100px;
+  }
+
+  .modal__size-list-item label {
+    width: 110px;
+  }
+
+  .modal__title {
+    margin-bottom: 30px;
   }
 }

@@ -4,32 +4,50 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HTML Academy: Мишка - Вязание на заказ</title>
+  <title>Мишка - Вязание на заказ</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="page-header">
-    <a class="page-header__logo" href="index.html"><img src="http://placehold.it/86x35" alt="MISHKA" width="86" height="35"></a>
+    <nav class="top-menu">
 
-    <nav class="main-nav main-nav--closed">
-      <button class="main-nav__toggler" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--active"><a href="catalog.html">Каталог товаров</a></li>
-          <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+      <div class="top-menu__wrapper">
+        <a class="top-menu__logo-link">
+          <picture class="top-menu__logo-options">
+            <img class="top-menu__logo" src="img/logo-mobile.svg" alt="MISHKA" width="86" height="35">
+          </picture>
+        </a>
+
+        <div class="top-menu__burger"></div>
+
+        <ul class="modal-menu modal-menu--closed">
+          <li class="modal-menu__item"><a href="catalog.html" class="modal-menu__link">Каталог товаров</a></li>
+          <li class="modal-menu__item"><a href="form.html" class="modal-menu__link">Вязание на заказ</a></li>
+          <li class="modal-menu__item"><a href="#" class="modal-menu__link">Новые поступления</a></li>
+          <li class="modal-menu__item"><a href="#" class="modal-menu__link">Распродажа</a></li>
         </ul>
 
-        <ul class="main-nav__user-list">
-          <li class="main-nav__user-item"><a href="#">Поиск по сайту</a></li>
-          <li class="main-nav__user-item"><a href="#">Корзина: пока пуста</a></li>
-        </ul>
+        <div class="user-block user-block--closed">
+          <div class="user-block__item">
+            <a href="#" class="user-block__link user-block__link--search">Поиск по сайту</a>
+          </div>
+          <div class="user-block__item">
+            <a href="#" class="user-block__link user-block__link--cart">Корзина: пока пуста</a>
+          </div>
+        </div>
       </div>
+
     </nav>
   </header>
 
   <section class="knitting-order">
-    <h1 class="knitting-order__title">Вязание на заказ</h1>
+    <div class="knitting-order__title">
+      <div class="knitting-order__title-wrapper">
+        <h1>Вязание на заказ</h1>
+      </div>
+    </div>
 
     <div class="knitting-order__wrapper">
       <p class="knitting-order__intro">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
@@ -115,7 +133,7 @@
 
         <fieldset class="knitting-order__fieldset">
           <legend>Доп</legend>
-          <textarea class="knitting-order__suggestions-textarea" rows="7" cols="23" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          <textarea class="knitting-order__suggestions-textarea" width="100%" rows="6" name="text" placeholder="Опишите все ваши пожелания к заказу"></textarea>
 
           <p class="knitting-order__remark">*Поля обязательны для заполнения</p>
         </fieldset>
@@ -129,6 +147,11 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
+
+      <div class="page-footer__logo">
+        <a href="index.html" title="На главную"><img src="http://placehold.it/102x34" alt="MISHKA"></a>
+      </div>
+
       <div class="page-footer__social-container">
         <ul class="page-footer__social-list">
           <li class="page-footer__social-link page-footer__social-link--insta"><a href="https://www.instagram.com/htmlacademy/" title="Мы в Instagram">Мы в Instagram</a></li>
@@ -142,6 +165,7 @@
           <img src="http://placehold.it/27x34" alt="HTML Academy icon" title="HTML Academy">
         </a>
       </p>
+
     </div>
   </footer>
 

@@ -1,21 +1,40 @@
-.catalog__wrapper {
-  margin-right: auto;
-  margin-left: auto;
+.catalog__title {
+  width: 100%;
+  background-color: @light-gray;
+  text-align: center;
 }
 
-.catalog__title {
-  margin-top: 0;
-  margin-bottom: 20px;
-  padding: 70px 30px;
+.catalog__title-wrapper {
+  .container();
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog__wrapper {
+  .container();
+  padding-top: 30px;
+}
+
+.catalog__wrapper-goods {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .catalog__item {
+  display: flex;
+  flex-wrap: wrap;
   width: 260px;
-  margin-right: auto;
-  margin-left: auto;
   margin-bottom: 30px;
   text-align: center;
   border: 1px solid @border-gray;
+
+  &--manufacturing {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
 }
 
 .catalog__item-text {
@@ -30,9 +49,8 @@
 .catalog__item-title {
   margin-top: 0;
   margin-bottom: 5px;
-  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 17px;
-  line-height: 24px;
   font-weight: bold;
   text-align: left;
 
@@ -43,16 +61,8 @@
 
 .catalog__item-description {
   margin-bottom: 18px;
-  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;;
   font-size: 13px;
-  line-height: 30px;
   color: @dark-gray;
-
-  &--manufacturing {
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;;
-    font-size: 13px;
-    line-height: 24px;
-  }
 }
 
 .catalog__item-buy {
@@ -60,13 +70,45 @@
 }
 
 .catalog__item-price {
-  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 24px;
   font-weight: bold;
 }
 
 .catalog__order-btn {
   width: 190px;
   margin-bottom: 30px;
+}
+
+@media @tablet-width {
+  .catalog__wrapper {
+    padding-top: 80px;
+  }
+
+  .catalog__item {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+}
+
+@media @desktop-width {
+  .catalog__wrapper {
+    padding-top: 130px;
+  }
+
+  .catalog__wrapper-goods {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .catalog__item {
+    flex-wrap: wrap;
+    width: 313px;
+    justify-content: center;
+
+    &--manufacturing {
+      width: 100%;
+    }
+  }
 }

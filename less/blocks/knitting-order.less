@@ -1,17 +1,24 @@
 .knitting-order__title {
-  margin-top: 0;
-  margin-bottom: 20px;
-  padding: 70px 30px;
+  width: 100%;
+  background-color: @light-gray;
+  text-align: center;
+}
+
+.knitting-order__title-wrapper {
+  .container();
+  min-height: 177px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .knitting-order__wrapper {
-  margin-right: auto;
-  margin-left: auto;
+  .container();
+  padding-top: 25px;
 }
 
 .knitting-order__intro {
   font-size: 13px;
-  line-height: 24px;
 }
 
 .knitting-order__fieldset {
@@ -26,28 +33,26 @@
   border-top-style: solid;
   border-top-color: @blue;
   outline: none;
+}
 
-  & legend {
-    margin-bottom: 20px;
-    background-color: @white;
-    padding-left: 0;
-    padding-right: 20px;
-    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
-    font-size: 17px;
-    line-height: 16px;
-    font-weight: bold;
-    color: @blue;
-    text-transform: uppercase;
-  }
+.knitting-order__fieldset legend {
+  margin-bottom: 20px;
+  background-color: @white;
+  padding-left: 0;
+  padding-right: 20px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
+  font-size: 17px;
+  font-weight: bold;
+  color: @blue;
+  text-transform: uppercase;
 }
 
 .knitting-order__client-input {
   box-sizing: border-box;
-  width: 260px;
+  width: 100%;
   margin-bottom: 15px;
   padding: 15px 0;
   font-size: 17px;
-  line-height: 18px;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -58,14 +63,14 @@
     padding-right: 40px;
     background-image: url("../img/icon-phone.svg");
     background-repeat: no-repeat;
-    background-position: 96% center;
+    background-position: 99% center;
   }
 
   &--email {
     padding-right: 40px;
     background-image: url("../img/icon-mail.svg");
     background-repeat: no-repeat;
-    background-position: 96% center;
+    background-position: 99% center;
   }
 
   &:hover {
@@ -74,19 +79,36 @@
 }
 
 .knitting-order__suggestions-textarea {
+  box-sizing: border-box;
+  width: 100%;
   margin-bottom: 3px;
   padding: 15px;
   font-size: 17px;
-  line-height: 18px;
   border: 2px solid @black;
   resize: none;
 }
 
 .knitting-order__remark {
   font-size: 14px;
-  line-height: 16px;
 }
 
 .knitting-order__submit {
   width: 260px;
+}
+
+@media @tablet-width {
+  .knitting-order__title-wrapper {
+    min-height: 225px;
+  }
+}
+
+@media @desktop-width {
+  .knitting-order__title-wrapper {
+    min-height: 255px;
+  }
+
+  .knitting-order__wrapper {
+    box-sizing: border-box;
+    padding-left: 175px;
+  }
 }
