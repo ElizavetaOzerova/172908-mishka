@@ -1,10 +1,15 @@
-
 .contacts__wrapper {
   .container();
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media @desktop-width {
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    padding-left: 175px;
+  }
 }
 
 .contacts__title {
@@ -53,16 +58,8 @@
   &--desktop {
     display: none;
   }
-}
 
-@media @desktop-width {
-  .contacts__wrapper {
-    box-sizing: border-box;
-    flex-wrap: nowrap;
-    padding-left: 175px;
-  }
-
-  .contacts__btn {
+  @media @desktop-width {
     display: none;
 
     &--desktop {

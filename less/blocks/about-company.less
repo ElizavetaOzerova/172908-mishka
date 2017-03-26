@@ -4,6 +4,11 @@
 
 .about-company__wrapper {
   .container();
+
+  @media @desktop-width {
+    box-sizing: border-box;
+    padding-left: 175px;
+  }
 }
 
 .about-company__title {
@@ -41,11 +46,4 @@
 .about-company__advantages-item b {
   font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 17px;
-}
-
-@media @desktop-width {
-  .about-company__wrapper {
-    box-sizing: border-box;
-    padding-left: 175px;
-  }
 }

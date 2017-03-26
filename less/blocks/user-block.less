@@ -4,11 +4,38 @@
   &--closed {
     display: none;
   }
+
+  @media @tablet-width {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 75%;
+    order: 2;
+    align-self: flex-start;
+
+    &--closed {
+      display: flex;
+    }
+  }
+
+  @media @desktop-width {
+    order: 3;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 37%;
+  }
 }
 
 .user-block__item {
   position: relative;
   border-top: 1px solid @border-gray;
+
+  @media @tablet-width {
+    border-top: none;
+  }
 }
 
 .user-block__link {
@@ -19,44 +46,8 @@
   font-family: "Open Sans Bold", "Arial", sans-serif;
   font-weight: bold;
   min-height: 24px;
-}
 
-.user-block__icon-cart,
-.user-block__icon-search {
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 32px;
-  left: 10%;
-}
-
-@media @tablet-width {
-  .user-block {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    flex: 1 1 75%;
-    order: 2;
-    align-self: flex-start;
-
-    &--closed {
-      display: flex;
-    }
-  }
-
-  .user-block__item {
-    border-top: none;
-  }
-
-  .user-block__item:hover .user-block__link {
-    color: fade(@black, 60%);
-  }
-
-  .user-block__item:active .user-block__link {
-    color: fade(@black, 30%);
-  }
-
-  .user-block__link {
+  @media @tablet-width {
     min-height: 32px;
     border-bottom: none;
     padding-bottom: 30px;
@@ -78,30 +69,56 @@
     }
   }
 
-  .user-block__icon-cart {
+  @media @desktop-width {
+    padding-right: 1px;
+  }
+}
+
+.user-block__icon-cart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 32px;
+  left: 10%;
+
+  @media @tablet-width {
     left: 27px;
     top: 34px;
     height: 19px;
   }
+}
 
-  .user-block__icon-search {
+.user-block__icon-search {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 32px;
+  left: 10%;
+
+  @media @tablet-width {
     left: 31px;
     top: 35px;
     height: 19px;
   }
+
+  @media @desktop-width {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 82px;
+  }
 }
 
-@media @desktop-width {
-  .user-block {
-    order: 3;
-    flex: 0 0 37%;
-  }
 
-  .user-block__link {
-    padding-right: 1px;
-  }
+.user-block__item:hover .user-block__link {
 
-  .user-block__link--search {
-    flex: 0 1 82px;
+  @media @tablet-width {
+    color: fade(@black, 60%);
+  }
+}
+
+.user-block__item:active .user-block__link {
+
+  @media @tablet-width {
+    color: fade(@black, 30%);
   }
 }

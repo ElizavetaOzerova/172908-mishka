@@ -4,6 +4,11 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+
+  @media @tablet-width {
+    .container();
+      flex-wrap: nowrap;
+  }
 }
 
 .main-page-btns__item {
@@ -34,12 +39,5 @@
 
   &:active {
     color: fade(@white, 30%);
-  }
-}
-
-@media @tablet-width {
-  .main-page-btns__wrapper {
-    .container();
-    flex-wrap: nowrap;
   }
 }

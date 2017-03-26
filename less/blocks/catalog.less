@@ -15,40 +15,69 @@
 .catalog__wrapper {
   .container();
   padding-top: 30px;
-}
 
-.catalog__wrapper-goods {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  @media @tablet-width {
+    padding-top: 80px;
+  }
+
+  @media @desktop-width {
+    padding-top: 130px;
+  }
 }
 
 .catalog__item {
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
   width: 260px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
-  text-align: center;
   border: 1px solid @border-gray;
 
-  &--manufacturing {
-    width: 100%;
+  @media @tablet-width {
     flex-wrap: nowrap;
+    width: 668px;
+    margin-bottom: 55px;
+
+    &--manufacturing {
+      display: block;
+    }
+  }
+
+  @media @desktop-width {
+    flex-wrap: wrap;
+    width: 315px;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+
+    &--manufacturing {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
   }
 }
 
 .catalog__item-text {
-  margin: 20px 30px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 25px;
   text-align: left;
 }
 
-.catalog__item-info {
-  border-bottom: 1px solid @border-gray;
+.catalog__item-buy {
+  border-top: 1px solid @border-gray;
 }
 
 .catalog__item-title {
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 17px;
   font-weight: bold;
@@ -60,9 +89,13 @@
 }
 
 .catalog__item-description {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-size: 13px;
   color: @dark-gray;
+
+  &--manufacturing {
+    line-height: 2;
+  }
 }
 
 .catalog__item-buy {
@@ -80,35 +113,12 @@
   margin-bottom: 30px;
 }
 
-@media @tablet-width {
-  .catalog__wrapper {
-    padding-top: 80px;
-  }
 
-  .catalog__item {
-    flex-wrap: nowrap;
-    width: 100%;
-  }
-}
+.catalog__wrapper-goods {
 
-@media @desktop-width {
-  .catalog__wrapper {
-    padding-top: 130px;
-  }
-
-  .catalog__wrapper-goods {
+    @media @desktop-width {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
-  }
-
-  .catalog__item {
-    flex-wrap: wrap;
-    width: 313px;
-    justify-content: center;
-
-    &--manufacturing {
-      width: 100%;
-    }
   }
 }
