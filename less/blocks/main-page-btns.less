@@ -1,4 +1,17 @@
-.main-page-btn {
+.main-page-btns__wrapper {
+  position: relative;
+  top: -92px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media @tablet-width {
+    .container();
+      flex-wrap: nowrap;
+  }
+}
+
+.main-page-btns__item {
   display: block;
   width: 100%;
   margin: 0;
@@ -6,9 +19,8 @@
   text-align: left;
   border: none;
   outline: none;
-  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 19px;
-  line-height: 24px;
   font-weight: bold;
   color: @white;
   background-color: @blue;
@@ -21,11 +33,11 @@
   }
 
   &--toy {
-    background-color: darken(desaturate(spin(@blue, 2.6422), 6.8572), 5.2941);
+    background-color: @blue-btn--toy;
     background-image: url("../img/icon-toy.svg");
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    color: fade(@white, 30%);
   }
 }

@@ -1,29 +1,25 @@
 .reviews__wrapper {
-  margin-right: auto;
-  margin-left: auto;
+  .container();
+
+  @media @desktop-width {
+    box-sizing: border-box;
+    padding-left: 175px;
+  }
 }
 
 .reviews__title {
   font-size: 25px;
-  line-height: 30px;
-}
-
-.reviews__text {
-  font-size: 15px;
-  line-height: 30px;
 }
 
 .reviews__author-name {
-  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 18px;
-  line-height: 24px;
   font-weight: bold;
   font-style: normal;
 }
 
 .reviews__author-email {
   font-size: 17px;
-  line-height: 30px;
   font-style: normal;
 }
 

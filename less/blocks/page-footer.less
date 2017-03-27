@@ -1,54 +1,89 @@
 .page-footer {
   background-color: @light-gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
 
-  &__wrapper {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
+  @media @tablet-width {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+
+.page-footer__wrapper {
+  .container();
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media @tablet-width {
+    flex-direction: row;
+  }
+}
+
+.page-footer__logo {
+  display: none;
+
+  @media @tablet-width {
+    display: block;
+  }
+}
+
+.page-footer__social-container {
+  width: 100%;
+  padding-bottom: 20px;
+  text-align: center;
+  border-bottom: 1px solid @border-gray--footer;
+
+  @media @tablet-width {
+    width: auto;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.page-footer__social-link {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  vertical-align: middle;
+  font-size: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--insta {
+    background-image: url("../img/icon-insta.svg");
   }
 
-  &__social-container {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid @border-gray;
+  &--fb {
+    background-image: url("../img/icon-fb.svg");
   }
 
-  &__social-link {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    margin: 0 5px;
-    vertical-align: top;
-    font-size: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    &--insta {
-      background-image: url("../img/icon-insta.svg");
-    }
-
-    &--fb {
-      background-image: url("../img/icon-fb.svg");
-    }
-
-    &--tw {
-      background-image: url("../img/icon-twitter.svg");
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+  &--tw {
+    background-image: url("../img/icon-twitter.svg");
   }
 
-  &__copyright {
-    padding-top: 15px;
-    padding-bottom: 15px;
+  &:active {
+    opacity: 0.3;
   }
+}
 
-  &__copyright-link {
-    font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
-    font-size: 19px;
-    line-height: 18px;
-    font-weight: bold;
+.page-footer__copyright {
+  margin-bottom: 0;
+  padding-top: 20px;
+
+  @media @tablet-width {
+    padding-top: 0;
   }
+}
+
+.page-footer__copyright-link {
+  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.page-footer__copyright-link img {
+  vertical-align: middle;
 }

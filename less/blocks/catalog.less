@@ -1,38 +1,85 @@
-.catalog__wrapper {
-  margin-right: auto;
-  margin-left: auto;
+.catalog__title {
+  width: 100%;
+  background-color: @light-gray;
+  text-align: center;
 }
 
-.catalog__title {
-  margin-top: 0;
-  margin-bottom: 20px;
-  padding: 70px 30px;
+.catalog__title-wrapper {
+  .container();
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.catalog__wrapper {
+  .container();
+  padding-top: 30px;
+
+  @media @tablet-width {
+    padding-top: 80px;
+  }
+
+  @media @desktop-width {
+    padding-top: 130px;
+  }
 }
 
 .catalog__item {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
   width: 260px;
-  margin-right: auto;
   margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
-  text-align: center;
   border: 1px solid @border-gray;
+
+  @media @tablet-width {
+    flex-wrap: nowrap;
+    width: 668px;
+    margin-bottom: 55px;
+
+    &--manufacturing {
+      display: block;
+    }
+  }
+
+  @media @desktop-width {
+    flex-wrap: wrap;
+    width: 315px;
+    margin-left: 0;
+    margin-right: 0;
+    justify-content: flex-start;
+
+    &--manufacturing {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      width: 100%;
+    }
+  }
 }
 
 .catalog__item-text {
-  margin: 20px 30px 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 25px;
   text-align: left;
 }
 
-.catalog__item-info {
-  border-bottom: 1px solid @border-gray;
+.catalog__item-buy {
+  border-top: 1px solid @border-gray;
 }
 
 .catalog__item-title {
   margin-top: 0;
-  margin-bottom: 5px;
-  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  margin-bottom: 10px;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 17px;
-  line-height: 24px;
   font-weight: bold;
   text-align: left;
 
@@ -42,16 +89,12 @@
 }
 
 .catalog__item-description {
-  margin-bottom: 18px;
-  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;;
+  margin-bottom: 20px;
   font-size: 13px;
-  line-height: 30px;
   color: @dark-gray;
 
   &--manufacturing {
-    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;;
-    font-size: 13px;
-    line-height: 24px;
+    line-height: 2;
   }
 }
 
@@ -60,13 +103,22 @@
 }
 
 .catalog__item-price {
-  font-family: "Open Sans Bold", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans Bold", "Arial", sans-serif;
   font-size: 15px;
-  line-height: 24px;
   font-weight: bold;
 }
 
 .catalog__order-btn {
   width: 190px;
   margin-bottom: 30px;
+}
+
+
+.catalog__wrapper-goods {
+
+    @media @desktop-width {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
 }

@@ -1,8 +1,13 @@
-.clearfix {
+.container() {
+  width: 81.25%;
+  margin: 0 auto;
 
-  &::after {
-    content: "";
-    display: block;
-    clear: both;
+  @media @tablet-width {
+    width: 86.9791666667%;
+  }
+
+  @media @desktop-width {
+    width: 91.3043478261%;
+    max-width: 1050px;
   }
 }
